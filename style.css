@@ -118,6 +118,7 @@ nav {
 }
 
 .menu-btn {
+  display: none;
   border: none;
   padding: 15px;
   cursor: pointer;
@@ -165,6 +166,10 @@ nav {
     background-color: transparent;
     color: white;
     padding: 20px 10px;
+  }
+
+  .menu-btn {
+    display: flex;
   }
 
   .search-input {
