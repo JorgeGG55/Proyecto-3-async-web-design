@@ -5,7 +5,11 @@ export function searchImages(query) {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
-      displayImages(data.results);
+      if (data.results.length === 0) {
+        displayNoResultsMessage();
+      } else {
+        displayImages(data.results);
+      }
     })
     .catch((error) => {
       console.error("Error al buscar imágenes:", error);
@@ -37,4 +41,9 @@ function displayImages(images) {
 
   imageResults.appendChild(firstColumn);
   imageResults.appendChild(secondColumn);
+}
+
+function displayNoResultsMessage() {
+  const imageResults = document.getElementById("imageResults");
+  imageResults.innerHTML = "<p>No se encontraron resultados.</p>";
 }

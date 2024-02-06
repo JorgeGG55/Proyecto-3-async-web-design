@@ -65,6 +65,10 @@ nav {
   margin-right: 20px;
 }
 
+.homeLogo {
+  cursor: pointer;
+}
+
 .logingButton,
 .searchButton {
   margin-left: 20px;
