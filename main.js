@@ -55,10 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   homeButton.addEventListener("click", () => {
     loadRandomImages();
+    searchInput.value = "";
   });
 
   homeLogo.addEventListener("click", () => {
     loadRandomImages();
+    searchInput.value = "";
   });
 
   function openNav() {
